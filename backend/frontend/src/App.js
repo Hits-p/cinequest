@@ -12,7 +12,7 @@ function App() {
   const searchMovies = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.get(`http://localhost:5000/search?query=${query}`);
+      const res = await axios.get(`https://cinequest-2y3t.onrender.com/search?query=${query}`);
       setMovies(res.data.results);
     } catch (err) {
       console.error(err);
