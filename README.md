@@ -1,36 +1,41 @@
-# 🌱 Smart AgroMonitor
-
-Smart AgroMonitor is a smart agriculture monitoring system designed to support data-driven farming decisions. It collects, stores, and visualizes environmental sensor data using a hybrid database architecture that combines relational and time-series databases to efficiently manage both real-time and historical agricultural data.
-
-## 🚜 Key Features
-
-* **Hybrid Storage:** Utilizes both PostgreSQL (for structured persistence) and InfluxDB (for high-speed time-series data).
-* **Real-time Monitoring:** Collects sensor data via REST APIs for immediate analysis.
-* **Data Visualization:** Generates dynamic server-side graphs using Matplotlib to track trends.
-* **Web Dashboard:** A Flask-based interface to view current status and historical trends.
-
-## 🧪 Parameters Monitored
-
-The system tracks the following critical environmental factors:
-* Temperature
-* Humidity
-* Soil Moisture
-* pH Level
-* Light Intensity
-
-## 🛠️ Technology Stack
-
-| Component | Technology | Description |
-| :--- | :--- | :--- |
-| **Backend** | Python (Flask) | REST API and application logic |
-| **Relational DB** | PostgreSQL | Structured, persistent storage for historical records |
-| **Time-Series DB** | InfluxDB | High-performance storage for real-time sensor streams |
-| **Visualization** | Matplotlib | Generates trend graphs and charts |
+# 🎬 CineQuest 📌 Project Description
+CineQuest is a full-stack movie discovery platform that allows users to search for films, view details, and curate personal watchlists. The system uses a modern cloud-native architecture, separating frontend and backend services to ensure scalability and secure data persistence in the cloud.
 
 ## ⚙️ System Architecture
+The application follows a decoupled client-server architecture with cloud database integration:
+* **React (Vercel)** → Client-side user interface and state management
+* **Flask (Render)** → REST API for handling requests and database logic
+* **MySQL (Aiven)** → Cloud-based relational storage for user watchlists
+* **TMDB API** → External source for real-time movie data
 
-1.  **Data Ingestion:** Sensors send data to the Flask REST API.
-2.  **Dual Storage:**
-    * **PostgreSQL:** Stores structured records for long-term auditing.
-    * **InfluxDB:** Stores time-stamped data for fast querying and trend analysis.
-3.  **Presentation:** Flask renders HTML templates, embedding Matplotlib graphs for user visualization.
+## 🚜 Features
+* Real-time movie search via the TMDB API
+* Persistent storage of user watchlists in Aiven MySQL
+* Secure backend communication using SSL certificates
+* Dynamic, responsive user interface built with React
+* Cloud-deployed architecture (Vercel + Render)
+
+## 🧪 Data Managed
+* Movie Titles
+* Poster Images
+* User Watchlist IDs
+* Movie Metadata (Release Dates, Ratings)
+
+## 🛠️ Tech Stack
+**Frontend**
+* React.js
+* CSS
+* Fetch API
+
+**Backend**
+* Python
+* Flask
+
+**Database**
+* MySQL (Aiven Cloud)
+
+**Deployment & Tools**
+* Vercel (Frontend)
+* Render (Backend)
+* Git
+* VS Code
